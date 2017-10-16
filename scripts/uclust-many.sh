@@ -16,7 +16,7 @@ inputF=$1
 
 while IFS=" " read -r tag genome input
 do
-    sh $mypath/run_rna_seq_analysis.sh $rawreads/$input $reference/reference_genomes/$genome/gene_features.fa.txt $reference/reference_genomes/$genome/GB.gb $tag $genome &
+    sh $mypath/run_rna_seq_analysis.sh $rawreads/$input $reference/reference_genomes/$genome/gene_features.fa.txt $reference/reference_genomes/$genome/GB.gb $tag $genome $mypath &
 done < "$inputF"
 
 
