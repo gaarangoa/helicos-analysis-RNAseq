@@ -17,11 +17,11 @@ inputF="/research/gustavo1/USDA/AUG2017/metadata"
 while IFS=" " read -r tag genome input
 do
     echo $genome
-    # sh $mypath/run_rna_seq_analysis.sh $rawreads/$input $reference/reference_genomes/$genome/gene_features.fa.txt $reference/reference_genomes/$genome/GB.gb $tag $genome $mypath 
+    sh $mypath/run_rna_seq_analysis.sh $rawreads/$input $reference/reference_genomes/$genome/gene_features.fa.txt $reference/reference_genomes/$genome/GB.gb $tag $genome $mypath &
 done < "$inputF"
 
 
-python $mypath/postprocess.py $inputF $rawreads $mypath 
+# python $mypath/postprocess.py $inputF $rawreads $mypath 
 
 
 
