@@ -7,8 +7,8 @@
 # genome: the reference genome used to compare
 # input: the sample fasta file  
 
-mypath="/research/gustavo1/USDA/pipeline/function_helicos/scripts"
-reference="/research/gustavo1/USDA/pipeline/function_helicos/"
+mypath="/research/gustavo1/USDA/pipeline/helicos-analysis-RNAseq/scripts"
+reference="/research/gustavo1/USDA/pipeline/helicos-analysis-RNAseq/"
 rawreads="/research/gustavo1/USDA/AUG2017/rawdata"
 
 inputF=$1
