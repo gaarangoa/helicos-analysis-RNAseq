@@ -69,6 +69,7 @@ fo = open(file+".genes","w")
 for i in data:
     #print data[i]['counts'], float(data[i]['gene_length'])/1000, float(mapped_reads)/1000000
     rpkm=float(data[i]['counts']/(float(data[i]['gene_length'])/1000))/(float(mapped_reads)/1000000)
+    # output: gene_id | rpkm | function | average identity | sample name | bacteria name 
     fo.write(i+"\t"+str(rpkm)+"\t"+data[i]["description"]+"\t"+str(float(data[i]['identity'])/float(data[i]['counts']))+"\t"+sample_name+"\t"+species+"\n")
 
 fo.close()
