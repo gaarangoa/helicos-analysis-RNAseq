@@ -43,7 +43,10 @@ for i in open(file):
     except:
         continue;
     #print i
-    fo.write("\t".join([gene_id]+i+[str(gene_length)]+GENOME[gene_id]['product'])+"\n")
+    try:
+        fo.write("\t".join([gene_id]+i+[str(gene_length)]+GENOME[gene_id]['product'])+"\n")
+    except:
+        fo.write("\t".join([gene_id]+i+[str(gene_length)]+['unknown'])+"\n")
     mapped_reads+=1
     k+=1
 

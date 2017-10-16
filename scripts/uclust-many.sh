@@ -11,12 +11,15 @@ mypath="/research/gustavo1/USDA/pipeline/helicos-analysis-RNAseq/scripts"
 reference="/research/gustavo1/USDA/pipeline/helicos-analysis-RNAseq/"
 rawreads="/research/gustavo1/USDA/AUG2017/rawdata"
 
-inputF=$1
+# inputF=$1 # this is the metadata file 
+inputF=/research/gustavo1/USDA/AUG2017/ecolimetadata
+
 
 
 while IFS=" " read -r tag genome input
 do
-    sh $mypath/run_rna_seq_analysis.sh $rawreads/$input $reference/reference_genomes/$genome/gene_features.fa.txt $reference/reference_genomes/$genome/GB.gb $tag $genome $mypath &
+    # echo $genome
+    sh $mypath/run_rna_seq_analysis.sh $rawreads/$input $reference/reference_genomes/$genome/gene_features.fa.txt $reference/reference_genomes/$genome/GB.gb $tag $genome $mypath 
 done < "$inputF"
 
 
