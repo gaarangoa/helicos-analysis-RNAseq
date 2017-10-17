@@ -74,8 +74,6 @@ for i in data:
 
 fo.close()
 
-
-
 # functions
 
 data={}
