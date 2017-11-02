@@ -13,8 +13,6 @@ rawreads=$8
 
 # awk '{if($_~/^@/){x=$_; gsub("@",">",x); getline;  print x"\n"$_}}' $file > $file.fa
 
-uclust --input $file --lib $gene_features --uc $file.uc --id 0.60 --libonly
+uclust --input $file --lib $gene_features --uc $file.uc --id 0.90 --libonly
 
 python $mypath/process_UCLUST.py $file.uc $gene_bank_file $sample_label $genome_name
-
-python $mypath/postprocess.py $inputF $rawreads $mypath 
