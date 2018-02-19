@@ -7,17 +7,21 @@
 # genome: the reference genome used to compare
 # input: the sample fasta file  
 
-mypath="/research/gustavo1/USDA/pipeline/helicos-analysis-RNAseq/scripts"
-reference="/research/gustavo1/USDA/pipeline/helicos-analysis-RNAseq/"
-rawreads="/research/gustavo1/USDA/AUG2017/rawdata"
-inputF="/research/gustavo1/USDA/AUG2017/metadata"
+# mypath="/research/gustavo1/USDA/pipeline/helicos-analysis-RNAseq/scripts"
+# reference="/research/gustavo1/USDA/pipeline/helicos-analysis-RNAseq/"
+# rawreads="/research/gustavo1/USDA/AUG2017/rawdata"
+# inputF="/research/gustavo1/USDA/AUG2017/metadata"
 
+mypath=$1
+reference=$2
+rawreads=$3
+inputF=$4
 
-stage=$1 # flag about the stage, first compute everyting or 2 postprocess
+stage=$5 # flag about the stage, first compute everyting or 2 postprocess
 
 # inputF=$1 # this is the metadata file 
 
-if [ $1 -eq 0 ]
+if [ $stage -eq 0 ]
 then
     while IFS=" " read -r tag genome input
     do
