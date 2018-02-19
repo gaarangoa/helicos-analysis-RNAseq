@@ -35,5 +35,5 @@ where:
     $4: text file with metadata
     $5: stage: 1 -> run alignment + analysis, 2 -> run analysis
 
-### This analysis have been used in the following studies.
+### This repository has been used in the following studies.
     1. Apigenin Impacts the Growth of the Gut Microbiota and Alters the Gene Expression of Enterococcus Minqian Wang 1,2, Jenni Firrman 1,*, Liqing Zhang 3, Gustavo Arango-Argoty 3, Peggy Tomasula 1Orcid, LinShu Liu 1, Weidong Xiao 4 and Kit Yam 2
